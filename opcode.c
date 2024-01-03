@@ -16,4 +16,17 @@ void push(m_stack_t **stack, unsigned int line_number)
         fprintf(stderr, "Error: malloc failure\n");
         exit(EXIT_FAILURE);
     }
+    /*Set the integer value in the new mode*/
+    new_mode->n = line_number;
+
+    /*Initialize pointers for the new node*/
+    new_node->prev = NULL;
+    new_node->next = *stack;
+
+    /*Update the previous pointer of the current top element*/
+    if (*stack != NULL)
+    (*stack)->prev = new_node;
+
+    /*Update the stack pointer to point to new top element*/
+    *stack = new_node;
 }
