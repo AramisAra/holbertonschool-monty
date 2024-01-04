@@ -7,6 +7,9 @@
  */
 void push(m_stack_t **stack, unsigned int line_number)
 {
+	/*Check if line number is not equal to 0*/
+	if (line_number != 0)
+	{
 	m_stack_t *new_node;
 
 	/* Allocate memory for a new stack node */
@@ -30,13 +33,14 @@ void push(m_stack_t **stack, unsigned int line_number)
 
 	/* Update the stack pointer to point to the new top element */
 	*stack = new_node;
+	}
 }
-
 /**
  *pall - print all opcode
  *@stack: array of data to print
  *@line_number: lines in input;
  */
+
 void pall(m_stack_t **stack, unsigned int line_number)
 {
 	m_stack_t *current = *stack;
