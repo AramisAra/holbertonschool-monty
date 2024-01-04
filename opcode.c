@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  *push - adds to the stack
  *@stack:a pointer to the head of the stack
@@ -56,8 +57,10 @@ void pall(m_stack_t **stack, unsigned int line_number)
  *@stack: pointer to the stack
  *@line_number: unused param in this function
  */
+
 void pint(m_stack_t **stack, unsigned int line_number)
 { /* Check if the stack is empty */
+	
 	if (stack == NULL || *stack == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
@@ -73,6 +76,7 @@ void pint(m_stack_t **stack, unsigned int line_number)
  * @stack: array of data
  * @line_number: line
  */
+
 void pop(m_stack_t **stack, unsigned int line_number)
 {
 	m_stack_t *temp;
