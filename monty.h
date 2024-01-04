@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MONTY_H
+#define MONTY_H
 
 /* Libraries */
 #include <stdio.h>
@@ -38,7 +38,7 @@ typedef struct instruction_s
 } instruction_t;
 
 /* Prototypes */
+void push(stack_t **stack, unsigned int line_number);
 
 
-
-
+#endif
