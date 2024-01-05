@@ -7,7 +7,6 @@
  * Return: int
  */
 
-
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
@@ -77,13 +76,11 @@ void nop(m_stack_t **stack, unsigned int line_number)
 	(void)line_number;
 	/* This function does nothing, as it's a placeholder for a no-op */
 }
-
 /**
  * isInteger - Check if a string is a valid integer.
  * @str: The input string to be checked.
  * Return: 1 if @str is a valid integer, 0 otherwise.
  */
-
 int isInteger(const char *str)
 {
 	if (!str || !*str || (*str != '-' && !isdigit(*str)))
@@ -96,12 +93,10 @@ int isInteger(const char *str)
 	}
 	return (1);
 }
-
 /**
  * free_token - Frees memory allocated for token array and token strings
  * @stack: The token array to be freed
  */
-
 void free_token(m_stack_t *stack)
 {
 	m_stack_t *current;

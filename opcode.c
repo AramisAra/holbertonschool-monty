@@ -5,11 +5,9 @@
  *@stack:a pointer to the head of the stack
  *@line_number:data to be stored
  */
+
 void push(m_stack_t **stack, unsigned int line_number)
 {
-	/*Check if line number is not equal to 0*/
-	if (line_number != 0)
-	{
 	m_stack_t *new_node;
 
 	/* Allocate memory for a new stack node */
@@ -33,14 +31,13 @@ void push(m_stack_t **stack, unsigned int line_number)
 
 	/* Update the stack pointer to point to the new top element */
 	*stack = new_node;
-	}
 }
+
 /**
  *pall - print all opcode
  *@stack: array of data to print
  *@line_number: lines in input;
  */
-
 void pall(m_stack_t **stack, unsigned int line_number)
 {
 	m_stack_t *current = *stack;
@@ -61,10 +58,8 @@ void pall(m_stack_t **stack, unsigned int line_number)
  *@stack: pointer to the stack
  *@line_number: unused param in this function
  */
-
 void pint(m_stack_t **stack, unsigned int line_number)
 { /* Check if the stack is empty */
-	
 	if (stack == NULL || *stack == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
@@ -80,7 +75,6 @@ void pint(m_stack_t **stack, unsigned int line_number)
  * @stack: array of data
  * @line_number: line
  */
-
 void pop(m_stack_t **stack, unsigned int line_number)
 {
 	m_stack_t *temp;

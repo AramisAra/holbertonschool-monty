@@ -17,6 +17,7 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
+
 typedef struct m_stack_s
 {
     int n;
@@ -38,7 +39,6 @@ typedef struct instruction_s
     void (*f)(m_stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-m_stack_t new_node;
 
 void free_token(m_stack_t *stack);
 int isInteger(const char *str);
